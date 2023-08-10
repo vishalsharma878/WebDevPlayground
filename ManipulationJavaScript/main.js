@@ -1,3 +1,4 @@
+
 const itemList = document.querySelector('#items');
 
 //parentNode
@@ -37,8 +38,8 @@ newDiv.className = 'hello';
 newDiv.id = 'hi';
 newDiv.setAttribute('title', 'Hello Div');
 
-let newDivText = document.createTextNode('This Document is Manipulated by JavaScript');
-
+let newDivText = document.createTextNode('HEllo');
+console.log(newDiv);
 //Add text to div
 newDiv.appendChild(newDivText);
 
@@ -48,5 +49,13 @@ let h1 = document.querySelector('header h1');
 container.insertBefore(newDiv, h1);
 newDiv.style.fontSize = "20px";
 
-console.log(newDiv);
+ //new div element
+let newText = document.createElement('div');
+let textHello = document.createTextNode("HEllo");
+newText.appendChild(textHello);
 
+let group = document.querySelector('#items'); 
+let firstItem = group.querySelector('li');   
+
+//Insert the new div element before the first li element
+group.insertBefore(newText, firstItem);
