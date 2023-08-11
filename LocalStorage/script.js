@@ -20,13 +20,21 @@ function storeData(e) {
 
     let userName = document.getElementById('name').value;
     let userEmail = document.getElementById('email').value;
+    let userPhone = document.getElementById('phone').value;
+    let conta = document.getElementsByClassName('container');
 
+    let data = document.createElement('li');
+    data.appendChild(document.createTextNode(userName+ ' ' +userEmail+ ' ' +userPhone));
+    
+    form.appendChild(data);
+    
     let obj = {
         name: userName,
         email: userEmail,
+        phone: userPhone
     };
 
     let obj_serialized = JSON.stringify(obj);
-    localStorage.setItem('my_obj', obj_serialized);
+    localStorage.setItem(userEmail, obj_serialized);
 }
 
