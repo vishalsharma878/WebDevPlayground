@@ -75,12 +75,13 @@ function addItem(e){
     //get input value
 
     let newItem = document.getElementById('item').value;
+    let descrption = document.getElementById('descr').value
     //console.log(newItem);
     //create new List
     let li = document.createElement('li');
     li.className = 'list-group-item';
     
-    li.appendChild(document.createTextNode(newItem));
+    li.appendChild(document.createTextNode(newItem+ ' '+descrption));
 
     let delBtn = document.createElement('button');
     //black btn
@@ -92,12 +93,13 @@ function addItem(e){
 
     editBtn.appendChild(document.createTextNode('edit'));
     delBtn.appendChild(document.createTextNode('X'));
-     
+    
     li.appendChild(editBtn); //edit button
     li.appendChild(delBtn);
-    
 
     itemList.appendChild(li);
+    
+    
 }
 
 //remove item function
@@ -126,3 +128,5 @@ function filterItem(e){
      }
    });
 }
+
+console.log(itemList);
