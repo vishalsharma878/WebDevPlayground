@@ -22,17 +22,31 @@ function storeData(e) {
 
     let data = document.createElement('li');
     data.appendChild(document.createTextNode(userName + ' ' + userEmail + ' ' + userPhone));
+
     //Delete Button
     let deleteButton = document.createElement('button');
     deleteButton.appendChild(document.createTextNode('Delete'));
     deleteButton.style.marginLeft='1px';
-    deleteButton.addEventListener('click', function() {
+        deleteButton.addEventListener('click', function() {
         localStorage.removeItem(userEmail);
         form.removeChild(data);
     });
 
+    //Edit Button
+    let editButton = document.createElement('button');
+    editButton.innerText = 'Edit';
+    editButton.addEventListener('click', function(){
+        document.getElementById('name').value = userName;
+        document.getElementById('email').value = userEmail;
+        document.getElementById('phone').value = userPhone;
+           localStorage.removeItem(userEmail);
+           form.removeChild(data)
+         
+    });
+    
     data.appendChild(deleteButton); // Add the delete button to the li element
-    form.appendChild(data);
+    data.appendChild(editButton);  //Add the edit button to the li element
+    form.appendChild(data);       
 
     let obj = {
         name: userName,
