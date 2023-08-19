@@ -40,6 +40,13 @@
     border-radius: 5px;
     border: 1px solid #cccccc;
   }
+  #phone{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+  }
   
   .btn {
     display: block;
