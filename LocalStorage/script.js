@@ -49,7 +49,10 @@ function appendDataToList(Name, Email, Phone, id) {
         document.getElementById('name').value = Name;
         document.getElementById('email').value = Email;
         document.getElementById('phone').value = Phone;
-        form.removeChild(data)
+        form.removeChild(data);
+        axios.delete(`https://crudcrud.com/api/ed307b10bfcb49d890d0f9982f0a1ef2/formData/${id}`)
+        .then(res => console.log('Edit Now', res.data))
+        .catch(err => alert(err));
 
     });
 
