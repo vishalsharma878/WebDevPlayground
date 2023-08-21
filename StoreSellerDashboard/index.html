@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Add Items</h1>
+    </header>
+    <section class="container">
+        <form id="my_form">
+
+            <label for="item">Item Name</label>
+            <input type="text" id="item" required>
+
+            <label for="description">Description</label>
+            <input type="text" id="description" required>
+
+            <label for="price">Price</label>
+            <input type="number" id="price" required>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" required>
+
+            <input class="btn" type="submit" value="Add item" id="btn">
+        </form>
+    
+    
+    <div>
+        <header>
+            <h1>Items Dashboard</h1>
+        </header>
+        <ul id="list"></ul>
+    </div>
+</section>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
