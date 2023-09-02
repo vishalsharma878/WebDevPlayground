@@ -20,25 +20,27 @@
             <div class="col-md-6">
                 <form id="my-form">
                     <label for="email">Email:</label>
-                    <input type="text" id="email" class="form-control" required>
+                    <input type="text" id="email" name="email" class="form-control" required>
                     <label for="amount" class="form-lable">Choose Expense Amount:</label>
-                    <input type="number" class="form-control" id="amount" min="1">
+                    <input type="number" class="form-control" name="amount" id="amount" min="1">
 
                     <label for="descrption">Choose Description:</label>
-                    <input type="text" id="description" class="form-control" required>
+                    <input type="text" id="description" name="description" class="form-control" required>
                     <label for="category">Choose Category:</label>
                     <select class="form-select" aria-label="Default select example" id="category">
-                        <option value="Fule">Fule</option>
-                        <option value="Food">Food</option>
-                        <option value="Shoping">Shoping</option>
+                        <option name="item" value="Fule">Fule</option>
+                        <option name="item" value="Food">Food</option>
+                        <option name="item" value="Shoping">Shoping</option>
                     </select>
-                    <input type="submit" value="Add Expense" class="btn btn-success btn-sm">
+                    <button type="submit" class="btn btn-success btn-sm">Add expense</button>
                 </form>
             </div>
         </div>
     </div>
 
     </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
 
